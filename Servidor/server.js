@@ -10,7 +10,7 @@ app.use(express.json());
 
 // A simple API route that returns a message
 app.get('/api/message', (req, res) => {
-  res.json({ text: "Hello from the Node.js server!" });
+  res.json({ text: "Hello from the Node.js ser!" });
 });
 
 app.listen(PORT, () => {
