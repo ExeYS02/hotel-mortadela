@@ -29,6 +29,9 @@ function App() {
 
   return (
     <BrowserRouter>
+
+    
+
     <div className="container">
       <h1>Full-Stack App</h1>
       <div className="api-box">
@@ -51,12 +54,7 @@ function App() {
     </Routes>
     </BrowserRouter>
 
-    // Hola, que onda
-
-
-    // Hola, que onda
-    // Hola, que onda
-    // Hola, que onda
+    
 
   );
 }
