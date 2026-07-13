@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css'; // Importing the CSS file
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Paguina_Inicio from './Paginas/Pagina_Inicio';
+import PaginaInicio from './Paginas/Pagina_Inicio';
 import Login from './Paginas/Login';
 
 // Estos imports los dejo como guía, no son todos, pero es una vista general de lo que ocuparemos
@@ -37,19 +37,18 @@ function App() {
     </div>
 
     <Routes>
-      <Route path="/" element={<Paguina_Inicio />} />
+      <Route path="/" element={<PaginaInicio />} />
       <Route path="/Login" element={<Login />} />
 
       {/* Enrutamientos a ajustar para poder usarlos*/}
-      <Route path="/RegisterForm" element={<RegisterFormPage />} />
+{/*      <Route path="/RegisterForm" element={<RegisterFormPage />} />
       <Route path="/Reserve" element={<ReservePage />} />
       <Route path="/OpViewRooms" element={<OperatorViewRooms />} />
       <Route path="/OpViewPays" element={<OperatorViewPays />} />
       <Route path="/OpViewEmails" element={<OperatorViewEmails />} />
       <Route path="/AdminDashboard" element={<AdminDashboardPage />} />
-      <Route path="/AdminReservesRecordsPage" element={<AdminReservesRecordsPage />} />
+      <Route path="/AdminReservesRecordsPage" element={<AdminReservesRecordsPage />} />*/}
     </Routes>
-
     </BrowserRouter>
 
     // Hola, que onda
