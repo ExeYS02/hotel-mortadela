@@ -7,13 +7,13 @@ import Paguina_Inicio from './Paginas/Pagina_Inicio';
 import Login from './Paginas/Login';
 
 // Estos imports los dejo como guía, no son todos, pero es una vista general de lo que ocuparemos
-import RegisterFormPage from './Pages/RegisterFormPage';
-import ReservePage from './Pages/ReservePage';
-import OperatorViewRooms from './Pages/OpViewRooms';
-import OperatorViewPays from './Pages/OpViewPays';
-import OperatorViewEmails from './Pages/OpViewEmails';
-import AdminDashboardPage from './Pages/AdminDashboardPage';
-import AdminReservesRecordsPage from './Pages/AdminDashboardPage';
+//import RegisterFormPage from './Pages/RegisterFormPage';
+//import ReservePage from './Pages/ReservePage';
+//import OperatorViewRooms from './Pages/OpViewRooms';
+//import OperatorViewPays from './Pages/OpViewPays';
+//import OperatorViewEmails from './Pages/OpViewEmails';
+//import AdminDashboardPage from './Pages/AdminDashboardPage';
+//import AdminReservesRecordsPage from './Pages/AdminDashboardPage';
 
 
 function App() {
