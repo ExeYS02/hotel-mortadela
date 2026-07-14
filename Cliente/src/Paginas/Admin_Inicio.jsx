@@ -24,23 +24,12 @@ function Admin_Inicio() {
             <div>
                 <h3>Que tarea desea hacer?</h3>
 
-                
-                <h3>Ver Habitaciones</h3>
-
-
-                <h3>Gestionar Reservas</h3>
-
-
-                <h3>Gestionar Pagos</h3>
-
-
-                <h3>Gestionar Mails</h3>
-
-                
-                <h3>CRUD Habitaciones</h3>
-
-
-                <h3>CRUD Operadores</h3>
+                <h3><button>Ver Habitaciones</button></h3>
+                <h3><button>Gestionar Reservas</button></h3>
+                <h3><button>Gestionar Pagos</button></h3>
+                <h3><button>Gestionar Mails</button></h3>
+                <h3><button>CRUD Habitaciones</button></h3>
+                <h3><button>CRUD Operadores</button></h3>
 
 
             </div>
