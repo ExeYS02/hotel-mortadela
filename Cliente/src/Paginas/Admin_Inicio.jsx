@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+
+
+
+
 function Admin_Inicio() {
   return (
     <div>
@@ -15,7 +19,7 @@ function Admin_Inicio() {
         </header>
 
         <main>
-            <h1>Bienvenido Operador ---</h1>
+            <h1>Bienvenido Administrador ---</h1>
 
             <div>
                 <h3>Que tarea desea hacer?</h3>
@@ -31,6 +35,12 @@ function Admin_Inicio() {
 
 
                 <h3>Gestionar Mails</h3>
+
+                
+                <h3>CRUD Habitaciones</h3>
+
+
+                <h3>CRUD Operadores</h3>
 
 
             </div>
