@@ -50,11 +50,6 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/Admin_Inicio" element={<Admin_Inicio />} />
       <Route path="/Op_Inicio" element={<Op_Inicio />} />
-
-
-
-
-      
       <Route path="/Op_Mapa_Hab" element={<Op_Mapa_Hab />} />
       <Route path="/Op_Reservas" element={<Op_Reservas />} />
       <Route path="/Op_Pagos" element={<Op_Pagos />} />
