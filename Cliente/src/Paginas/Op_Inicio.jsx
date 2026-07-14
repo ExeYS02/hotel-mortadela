@@ -26,17 +26,24 @@ function Op_Inicio() {
             <div>
                 <h3>Que tarea desea hacer?</h3>
 
-                
+                <Link to="/Op_Mapa_Hab">
                 <h3>Ver Habitaciones</h3>
+                </Link>
 
-
+                
+                <Link to="/Op_Reservas">
                 <h3>Gestionar Reservas</h3>
+                </Link>
 
 
+                <Link to="/Op_Pagos">
                 <h3>Gestionar Pagos</h3>
+                </Link>
 
 
+                <Link to="/Op_Mails">
                 <h3>Gestionar Mails</h3>
+                </Link>
 
 
             </div>

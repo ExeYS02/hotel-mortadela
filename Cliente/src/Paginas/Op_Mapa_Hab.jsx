@@ -21,6 +21,11 @@ function Op_Mapa_Hab() {
         </header>
 
         <main>
+
+            <Link to="/Op_Inicio">
+            <button>Volver</button>
+            </Link>
+
             <h1>Hola estas en mapas de habitaciones</h1>
 
         </main>

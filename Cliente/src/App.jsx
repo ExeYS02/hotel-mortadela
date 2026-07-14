@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PaginaInicio from './Paginas/Pagina_Inicio';
 import Login from './Paginas/Login';
 import Op_Inicio from './Paginas/Op_Inicio';
+import Op_Mapa_Hab from './Paginas/Op_Mapa_Hab';
+import Op_Reservas from './Paginas/Op_Reservas';
+import Op_Pagos from './Paginas/Op_Pagos';
+import Op_Mails from './Paginas/Op_Mails';
 
 // Estos imports los dejo como guía, no son todos, pero es una vista general de lo que ocuparemos
 //import RegisterFormPage from './Pages/RegisterFormPage';
@@ -42,6 +46,15 @@ function App() {
       <Route path="/" element={<PaginaInicio />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Op_Inicio" element={<Op_Inicio />} />
+
+
+
+
+      
+      <Route path="/Op_Mapa_Hab" element={<Op_Mapa_Hab />} />
+      <Route path="/Op_Reservas" element={<Op_Reservas />} />
+      <Route path="/Op_Pagos" element={<Op_Pagos />} />
+      <Route path="/Op_Mails" element={<Op_Mails />} />
 
       {/* Enrutamientos a ajustar para poder usarlos*/}
 {/*      <Route path="/RegisterForm" element={<RegisterFormPage />} />
