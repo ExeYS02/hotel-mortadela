@@ -1,0 +1,1 @@
+// Esta será la página donde el operador podrá ver las habitaciones

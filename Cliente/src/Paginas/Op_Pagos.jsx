@@ -1,0 +1,1 @@
+//En esta pagina, el operador podrá procesar los pagos, como a su vez tambien contará con un registro de todos los pagos.
