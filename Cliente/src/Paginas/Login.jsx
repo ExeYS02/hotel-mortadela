@@ -28,11 +28,15 @@ function Login() {
       </div>
     
       <button>Acceder</button>
+<<<<<<< Updated upstream
 
       <Link to="/Op_Inicio">
         <button>Entrar Como Operador</button>
       </Link>
       
+=======
+      <Link to="/Admin_Inicio"><Button> Log como Admin </Button></Link>
+>>>>>>> Stashed changes
     </form>
     
     </section>
