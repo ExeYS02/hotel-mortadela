@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 function Login() {
   return (
     <div>
+
+      <Link to="/">
+      <button>Volver</button>
+      </Link>
+
       <h1>Login Page</h1>
 
       <p>Hola soy el login</p>
@@ -23,13 +28,17 @@ function Login() {
       </div>
     
       <button>Acceder</button>
+
+      <Link to="/Op_Inicio">
+        <button>Entrar Como Operador</button>
+      </Link>
       
     </form>
     
     </section>
 
       <h3>Te estas logeando</h3>
-      {/* Aquí puedes agregar tu formulario de inicio de sesión */}
+
     </div>
   );
 }

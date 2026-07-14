@@ -10,7 +10,7 @@ function PaginaInicio() {
       
       {/* 1. Esta será la parte del ancabezado, donde estará el boton de inicio de sesión, y los botones de navegacion */}
       <header className="header-inicio">
-        <h1>Hotel Motadela</h1>
+        <h1>Hotel Mortadela</h1>
         
         <div>
             <h3>Home</h3>
