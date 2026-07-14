@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import PaginaInicio from './Paginas/Pagina_Inicio';
 import Login from './Paginas/Login';
+import Admin_Inicio from './Paginas/Admin_Inicio';
 import Op_Inicio from './Paginas/Op_Inicio';
 import Op_Mapa_Hab from './Paginas/Op_Mapa_Hab';
 import Op_Reservas from './Paginas/Op_Reservas';
@@ -35,6 +36,8 @@ function App() {
   return (
     <BrowserRouter>
 
+    
+
     <div className="container">
       <h1>Full-Stack App</h1>
       <div className="api-box">
@@ -45,6 +48,7 @@ function App() {
     <Routes>
       <Route path="/" element={<PaginaInicio />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Admin_Inicio" element={<Admin_Inicio />} />
       <Route path="/Op_Inicio" element={<Op_Inicio />} />
 
 

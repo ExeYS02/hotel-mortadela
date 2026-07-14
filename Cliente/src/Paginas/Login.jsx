@@ -32,6 +32,10 @@ function Login() {
       <Link to="/Op_Inicio">
         <button>Entrar Como Operador</button>
       </Link>
+
+      <Link to="/Admin_Inicio">
+        <button>Entrar Como Admin</button>
+      </Link>
       
     </form>
     
