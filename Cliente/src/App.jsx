@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import PaginaInicio from './Paginas/Pagina_Inicio';
 import Login from './Paginas/Login';
+import Admin_Inicio from './Paginas/Admin_Inicio';
 
 // Estos imports los dejo como guía, no son todos, pero es una vista general de lo que ocuparemos
 //import RegisterFormPage from './Pages/RegisterFormPage';
@@ -42,6 +43,7 @@ function App() {
     <Routes>
       <Route path="/" element={<PaginaInicio />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Admin" element={<Admin_Inicio />} />
 
       {/* Enrutamientos a ajustar para poder usarlos*/}
 {/*      <Route path="/RegisterForm" element={<RegisterFormPage />} />
