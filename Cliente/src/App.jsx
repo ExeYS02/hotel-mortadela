@@ -36,8 +36,6 @@ function App() {
   return (
     <BrowserRouter>
 
-    
-
     <div className="container">
       <h1>Full-Stack App</h1>
       <div className="api-box">
