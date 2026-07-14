@@ -1,1 +1,0 @@
-// Este será la página donde se mostrarán las distintas acciones de operador.
