@@ -1,9 +1,21 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 function PaginaInicio() {
   
   // Aquí puedes poner lógica de JavaScript si la necesitas antes del return
+
+  const [NomyApe, setNomyApe] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [contenido, setContenido] = useState('');
+
+  // Función que se ejecuta cuando el usuario hace clic en "Ingresar"
+  const consultacliente = (evento) => {
+    evento.preventDefault(); // Evita que la página se recargue al enviar el formulario
+    console.log("Consulta del cliente:",NomyApe, correo, contenido);
+    // Aquí luego conectarás con tu Servidor/Backend
+};
 
   return (
     <div className="contenedor-pagina">
@@ -61,12 +73,35 @@ function PaginaInicio() {
           <button>Reservar</button>
         </section>
 
-        <section className="Consultas">
-          <h2>Espacio destinao al formario para hacer y mandar consultas</h2>
-          <h4>Nombrey Apellido</h4>
-          <h4>email</h4>
-          <h4>Recuadro donde estará el Contenido</h4>
-          <button>Enviar Consulta</button>
+        <section className="ConsultasCliente">
+
+          <form onSubmit={consultacliente}>
+
+            <div>
+              <label>Nombre y Apellido:</label>
+              <input type="text" value={NomyApe}
+                onChange={(e) => setNomyApe(e.target.value)} 
+              />
+            </div>
+          
+          <div>
+            <label>Correo Electrónico:</label>
+            <input type="email" value={correo}
+              onChange={(e) => setCorreo(e.target.value)} 
+            />
+          </div>
+        
+          <div>
+            <label>Contenido:</label>
+            <input type="text" value={contenido}
+            onChange={(e) => setContenido(e.target.value)} 
+            />
+          </div>
+
+          <button type="submit">Enviar Consulta</button>
+
+          </form>
+
         </section>
 
         <section className="UbicacionHotel">

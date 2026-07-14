@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
 
-
-
-
 function Admin_Inicio() {
   return (
     <div>
