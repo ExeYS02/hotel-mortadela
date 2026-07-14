@@ -1,4 +1,5 @@
 //En esta página estaran todos los dashboars, parametros y variables que sean de importancia para el admin.import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Admin_Dashboards() {
     return (
