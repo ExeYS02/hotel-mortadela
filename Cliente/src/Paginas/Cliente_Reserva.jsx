@@ -29,6 +29,16 @@ function Cliente_Reserva() {
                 <input type="number" min="1" max="20"/>
             </div>
 
+            <div>
+                <label>Fecha de entrada:</label>
+                <input type="date"/>
+            </div>
+
+            <div>
+                <label>Fecha de Salida:</label>
+                <input type="date"/>
+            </div>
+
             <button>Consultar</button>
 
         </form>
