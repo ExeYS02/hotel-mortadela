@@ -18,6 +18,7 @@ import Admin_Mails from './Paginas/Admin_Mails';
 import Admin_CRUD_Hab_inicio from './Paginas/Admin_CRUD_Hab_inicio';
 import Admin_CRUD_Op_inicio from './Paginas/Admin_CRUD_Op_inicio';
 import Admin_Dashboards from './Paginas/Admin_Dashboards';
+import Cliente_Reserva from './Paginas/Cliente_Reserva';
 
 // Estos imports los dejo como guía, no son todos, pero es una vista general de lo que ocuparemos
 //import RegisterFormPage from './Pages/RegisterFormPage';
@@ -66,6 +67,7 @@ function App() {
       <Route path="/Admin_CRUD_Hab_inicio" element={<Admin_CRUD_Hab_inicio />} />
       <Route path="/Admin_CRUD_Op_inicio" element={<Admin_CRUD_Op_inicio />} />
       <Route path="/Admin_Dashboards" element={<Admin_Dashboards />} />
+      <Route path="/Cliente_Reserva" element={<Cliente_Reserva />} />
 
       {/* Enrutamientos a ajustar para poder usarlos*/}
 {/*      <Route path="/RegisterForm" element={<RegisterFormPage />} />

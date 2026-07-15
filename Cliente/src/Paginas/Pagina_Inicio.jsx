@@ -26,10 +26,15 @@ function PaginaInicio() {
         
         <div>
             <h3>Home</h3>
+
             <h3>Habitaciones</h3>
+
             <h3>Servicios</h3>
+
             <h3>Reservar</h3>
+
             <h3>Consultas</h3>
+
             <h3>Ubicación</h3>
 
             <Link to="/Login">
@@ -68,10 +73,14 @@ function PaginaInicio() {
           <h4>-SPA</h4>
         </section>
 
-        <section className="Reservarya">
+        <div className="Reservar_Ya">
           <h2>Aca habrá un espació donde estará un boton llamativo, que tiente a los clientes a reservar</h2>
-          <button>Reservar</button>
-        </section>
+
+          <Link to="Cliente_Reserva">
+            <button>Reservar</button>
+          </Link>
+
+        </div>
 
         <section className="ConsultasCliente">
 
