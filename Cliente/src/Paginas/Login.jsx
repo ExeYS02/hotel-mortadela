@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 function Login() {
 
-  const [correo, setCorreo] = useState('');
+  const [usuario, setUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
 
   // Función que se ejecuta cuando el usuario hace clic en "Acceder"
   const manejarEnvio = (evento) => {
     evento.preventDefault(); // Evita que la página se recargue al enviar el formulario
-    console.log("Intentando iniciar sesión con:", correo, contrasena);
+    console.log("Intentando iniciar sesión con:", usuario, contrasena);
     // Aquí luego conectarás con tu Servidor/Backend
   };
 
@@ -31,7 +31,7 @@ function Login() {
 
       <div>
         <label>Usuario:</label>
-        <input type="email" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
+        <input type="text" value={usuario} onChange={(e) => setUsuario(e.target.value)}/>
       </div>
     
       <div>
