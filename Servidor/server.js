@@ -16,3 +16,24 @@ app.get('/api/message', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+//Primera instancia de prueba para que el backend 
+// reciba los datos que le manda el frontend
+
+app.post('/api/login', (req, res) => {
+  
+  // req.body contiene los datos que empaquetaste en el frontend con JSON.stringify
+  const correoDelUsuario = req.body.correo;
+  const contrasenaDelUsuario = req.body.contrasena;
+
+  console.log("¡El servidor recibió un intento de login de:", correoDelUsuario);
+
+  // Aquí iría la lógica/Conexión con la Base de Datos para verificar...
+  if (correoDelUsuario === 'admin@hotel.com') {
+    // res.send es la respuesta que vuelve al 'fetch' del Frontend
+    res.status(200).send({ mensaje: "Login exitoso", nombre: "Admin" });
+  } else {
+    res.status(401).send({ mensaje: "Credenciales inválidas" });
+  }
+});
