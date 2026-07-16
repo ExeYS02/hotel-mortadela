@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+//import '../CSS_Paginas/Pag_Inicio';
 
 function PaginaInicio() {
   
