@@ -13,29 +13,46 @@ const client = new Client({
   database: "HotelMortadela",
 });
 
-client.connect();
 
-client.query(`SELECT * FROM Habitaciones`, (error, result) => {
-  if(!error) {
-    console.log(result.rows);
-  } else {
-    console.log(error.message);
-  }
-  client.end();
-});
 
 
 app.use(cors());
 app.use(express.json());
 
 // A simple API route that returns a message
-app.get('/api/message', (req, res) => {
-  res.json({ text: "Hello from the Node.js ser!" });
+
+
+
+client.connect();
+
+client.query(`SELECT * FROM Pagos WHERE pcod = 1`, (error, result) => {
+  if(!error) {
+    console.log(result.rows);
+  } else {
+    console.log(error.message);
+  }
+  
+
+
+
+
+var message1 = JSON.stringify(result.rows[0].text); // Assuming the first row has a 'text' column
+
+
+  app.get('/api/message', (req, res) => {
+    res.json({  text: JSON.stringify(result.rows[0].monto)});
+  });
+
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+
+
+  client.end();
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+
+
 
 
 //Primera instancia de prueba para que el backend 
