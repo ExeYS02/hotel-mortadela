@@ -1,9 +1,29 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
+const { Client } = require("pg");
 
 const app = express();
 const PORT = 5000;
+const client = new Client({
+  host: "localhost",
+  user: "postgres",
+  port: 5432,
+  password: "12345",
+  database: "HotelMortadela",
+});
+
+client.connect();
+
+client.query(`SELECT * FROM Habitaciones`, (error, result) => {
+  if(!error) {
+    console.log(result.rows);
+  } else {
+    console.log(error.message);
+  }
+  client.end();
+});
+
 
 app.use(cors());
 app.use(express.json());

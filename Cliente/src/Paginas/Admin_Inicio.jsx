@@ -4,7 +4,7 @@ function Admin_Inicio() {
   return (
     <div>
       <header>
-            <h1>Esta es la pag de inicio del op</h1>
+            <h1>Esta es la pag de inicio del admin</h1>
             <p>Recordar que este un es un header temporal, por que teniamos planeado </p>
 
 
