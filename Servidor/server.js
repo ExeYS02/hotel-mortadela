@@ -1,11 +1,18 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
-const { Client } = require("pg");
+const { Pool } = require("pg");
+
+
+//Cambie el "Client" por "Pool". El primero sirve 
+// para abrir una unica conexión, y me trajo problemas 
+// a la hora de intentar añadir una consulta más como la del login.
+// El "Pool" en cambio, permite hacer multiples conexiones. 
+// Ideal cuando tengamos que hacer multiples consultas a la vez.
 
 const app = express();
 const PORT = 5000;
-const client = new Client({
+const pool = new Pool({
   host: "localhost",
   user: "postgres",
   port: 5432,
@@ -23,9 +30,9 @@ app.use(express.json());
 
 
 
-client.connect();
+//client.connect();
 
-client.query(`SELECT * FROM Pagos WHERE pcod = 1`, (error, result) => {
+pool.query(`SELECT * FROM Pagos WHERE pcod = 1`, (error, result) => {
   if(!error) {
     console.log(result.rows);
   } else {
@@ -42,20 +49,15 @@ var message1 = JSON.stringify(result.rows[0].text);
     console.log(`Server is running on http://localhost:${PORT}`);
   });
 
-  client.end();
+  //client.end();
 });
 
 
 
 
 
-//Primera instancia de prueba para que el backend 
-// se comunique con la base de datos y pueda verificar 
-// con la respuesta recibia. Y posteriormente devolver al front una 
-// respuesta definitiva
-// El problema que posee hasta ahora, es que el cliente se cierra
-// y no es posible hacer consultas a la base de datos
-// cito textualmente el error: Client was closed and is not queryable
+//Primera instancia funcional de comunicación entre backend
+//  y la base de datos.
 
 app.post('/api/login', async (req, res) => {
   
@@ -72,9 +74,9 @@ app.post('/api/login', async (req, res) => {
     // y un proyecto aislado pero asienta una la costumbre de seguridad 
     // (En otras palabras el $1 es una medida de seguridad)
     const consulta = `SELECT * FROM usuarios WHERE username = $1`;
-    
+
     // El AWAIT sirve para que Node.js se detenga hasta que la bdd responda
-    const result = await client.query(consulta, [nombreDelUsuario]);
+    const result = await pool.query(consulta, [nombreDelUsuario]);
 
     // Comienzan los IFs
     // Primero: ¿La base de datos encontró a alguien con ese usuario?
@@ -99,6 +101,5 @@ app.post('/api/login', async (req, res) => {
     console.error("Error en la base de datos:", error.message);
     res.status(500).send({ mensaje: "Error interno del servidor" });
   }
-
 
 });
