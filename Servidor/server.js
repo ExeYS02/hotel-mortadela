@@ -65,9 +65,8 @@ app.post('/api/login', (req, res) => {
   const contrasenaDelUsuario = req.body.contrasena;
 
   console.log("¡El servidor recibió un intento de login de:", correoDelUsuario);
-
   // Aquí iría la lógica/Conexión con la Base de Datos para verificar...
-  if (correoDelUsuario === 'admin@hotel.com') {
+  if (correoDelUsuario === 'admin@gmail.com') {
     // res.send es la respuesta que vuelve al 'fetch' del Frontend
     res.status(200).send({ mensaje: "Login exitoso", nombre: "Admin" });
   } else {
