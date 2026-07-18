@@ -30,6 +30,13 @@ function Op_Reservas() {
 
         </main>
 
+
+        <p><button>Ver reservas</button></p>
+            <p>Hay X reservas pendientes</p>
+            <p>DATOS RESERVA</p>
+            <p><button>Aprobar reserva</button></p>
+            <p><button>Rechazar reserva</button></p>
+
     </div>
       
   );

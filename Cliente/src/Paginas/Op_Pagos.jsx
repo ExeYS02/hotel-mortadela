@@ -30,6 +30,12 @@ function Op_Pagos() {
 
         </main>
 
+        <p><button>Ver pagos</button></p>
+            <p>Hay X pagos pendientes</p>
+            <p>DATOS PAGO</p>
+            <p><button>Aprobar pago</button></p>
+            <p><button>Rechazar pago</button></p>
+
     </div>
       
   );
