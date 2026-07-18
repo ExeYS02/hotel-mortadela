@@ -6,7 +6,7 @@ function Admin_Pagos() {
             <header>
                 <h1>Esta es la pag de inicio de los pagos</h1>
                 <p>Recordar que este un es un header temporal, por que teniamos planeado </p>
-            
+
                 <Link to="/">
                     <button>Cerrar Sesión</button>
                 </Link>
@@ -20,6 +20,14 @@ function Admin_Pagos() {
                 </Link>
 
             </main>            
+            
+            <p><button>Ver pagos</button></p>
+            <p>Hay X pagos pendientes</p>
+            <p>DATOS PAGO</p>
+            <p><button>Aprobar pago</button></p>
+            <p><button>Rechazar pago</button></p>
+
+
 
         </div>
     )
