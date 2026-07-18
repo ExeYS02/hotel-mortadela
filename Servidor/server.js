@@ -87,7 +87,7 @@ app.post('/api/login', async (req, res) => {
 
       // Segundo: ¿La contraseña coincide?
       if (usuarioEncontrado.pass === contrasenaDelUsuario) {
-        res.status(200).send({ mensaje: "Login exitoso", nombre: usuarioEncontrado.username });
+        res.status(200).send({ mensaje: "Login exitoso", cargo: usuarioEncontrado.cargo });
       } else {
         res.status(401).send({ mensaje: "Contraseña incorrecta" });
       }

@@ -54,9 +54,12 @@ function Login() {
         const datosServidor = await respuesta.json();
         console.log("Bienvenido:", datosServidor.nombre);
 
-        // Navegamos a la siguiente página
-        navegar('/Admin_Inicio');
-      
+        if (datosServidor.cargo==='a') {
+          navegar('/Admin_Inicio'); 
+        } else {
+          navegar('/Op_Inicio')
+        }
+        
       } else {
         // Si el servidor responde con un error (ej. HTTP 401 No Autorizado),
         // forzamos el error para que caiga en el 'catch'
