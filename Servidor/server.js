@@ -61,12 +61,12 @@ var message1 = JSON.stringify(result.rows[0].text); // Assuming the first row ha
 app.post('/api/login', (req, res) => {
   
   // req.body contiene los datos que empaquetaste en el frontend con JSON.stringify
-  const correoDelUsuario = req.body.correo;
+  const nombreDelUsuario = req.body.usuario;
   const contrasenaDelUsuario = req.body.contrasena;
 
-  console.log("¡El servidor recibió un intento de login de:", correoDelUsuario);
+  console.log("¡El servidor recibió un intento de login de:", nombreDelUsuario);
   // Aquí iría la lógica/Conexión con la Base de Datos para verificar...
-  if (correoDelUsuario === 'admin@gmail.com') {
+  if (nombreDelUsuario === 'hoteladmin') {
     // res.send es la respuesta que vuelve al 'fetch' del Frontend
     res.status(200).send({ mensaje: "Login exitoso", nombre: "Admin" });
   } else {

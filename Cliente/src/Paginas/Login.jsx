@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
-  const [correo, setCorreo] = useState('');
+  const [usuario, setUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
 
 
@@ -41,7 +41,7 @@ function Login() {
       const respuesta = await fetch('http://localhost:5000/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ correo, contrasena })
+      body: JSON.stringify({ usuario, contrasena })
       });
     
       // Le preguntamos al 'fetch' si el servidor 
@@ -91,11 +91,11 @@ function Login() {
       <form onSubmit={manejarEnvio}>
 
         <div>
-          <label>Correo Electrónico:</label>
+          <label>Usuario:</label>
           <input 
-            type="email" 
-            value={correo}
-            onChange={(e) => setCorreo(e.target.value)} 
+            type="text" 
+            value={usuario}
+            onChange={(e) => setUsuario(e.target.value)} 
             required
           />
         </div>
